@@ -35,6 +35,7 @@ const possuiCarro = true;
 const possuiCasa = true;
 let darCredito;
 
-darCredito = (possuiCarro && possuiCasa) ? true : false;
+// darCredito = (possuiCarro && possuiCasa) ? true : false;
+darCredito = (possuiCarro && possuiCasa)
 
 console.log(darCredito);
