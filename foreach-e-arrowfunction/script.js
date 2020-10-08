@@ -51,3 +51,5 @@ imgs.forEach(function(item, index, array) {
 // });
 
 // imgs.forEach(() => i++);
+
+
