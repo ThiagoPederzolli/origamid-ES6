@@ -1,32 +1,32 @@
-const obj = {
-  nome: 'Thiago',
-  idade: 30,
-}
+// const obj = {
+//   nome: 'Thiago',
+//   idade: 30,
+// }
 
-obj.teste = 'Isso';
+// obj.teste = 'Isso';
 
-function Pessoa(nome, idade) {
-  this.nome = nome;
-  this.idade = idade;
-  this.abracar = function() {
-    return 'Abraçou';
-  };
-  this.andar = () => {
-    return 'Andou pelo Objeto';
-  };
-};
-// console.log(Pessoa.prototype);
+// function Pessoa(nome, idade) {
+//   this.nome = nome;
+//   this.idade = idade;
+//   this.abracar = function() {
+//     return 'Abraçou';
+//   };
+//   this.andar = () => {
+//     return 'Andou pelo Objeto';
+//   };
+// };
+// // console.log(Pessoa.prototype);
 
-Pessoa.prototype.andar = function() {
-  return this.nome + ' andou';
-}
-Pessoa.prototype.nadar = function() {
-  return this.nome + ' nadou';
-}
-// console.log(Pessoa.prototype); // retorna o objeto
+// Pessoa.prototype.andar = function() {
+//   return this.nome + ' andou';
+// }
+// Pessoa.prototype.nadar = function() {
+//   return this.nome + ' nadou';
+// }
+// // console.log(Pessoa.prototype); // retorna o objeto
 
 
-const thiago = new Pessoa('Thiago', 30);
+// const thiago = new Pessoa('Thiago', 30);
 
 // console.log(thiago.prototype);
 
@@ -57,3 +57,41 @@ const Carro = {
   }
 }
 
+// Exercícios:
+
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
+function Pessoas(nome, sobrenome, idade) {
+  this.nome = nome;
+  this.sobrenome = sobrenome;
+  this.idade = idade;
+}
+
+Pessoas.prototype.nomeCompleto = function() {
+  return `${this.nome} ${this.sobrenome}`;
+}
+
+const thiago = new Pessoas('Thiago', 'Pederzolli', 30);
+
+
+// Liste os métodos acessados por 
+// dados criados com NodeList,
+// HTMLCollection, Document
+
+// Listas colocadas nas anotações do evernote para facilitar pesquisa
+
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
+
+li; // HTMLLIElement
+li.click; // Function
+li.innerText; // String
+li.value; // Number
+li.hidden; // Boolean
+li.offsetLeft; // Number
+li.click(); // undefined
+
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name; // String
