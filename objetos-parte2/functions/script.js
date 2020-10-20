@@ -70,3 +70,42 @@ const filtro = Array.prototype.filter.call(li, function(item) {
 });
 
 console.log(filtro); // Retorna os itens que possuem ativo
+
+const numeros = [3,4,6,1,34,44,32];
+
+console.log(Math.max.apply(null, numeros))
+
+const li2 = document.querySelectorAll('li');
+
+const filtrarLi = Array.prototype.filter.bind(li2, function(item) {
+  return item.classList.contains('ativo');
+});
+
+console.log(filtrarLi());
+
+
+const carro = {
+  marca: 'Ford',
+  ano: 2018,
+  acelerar: function(aceleracao, tempo) {
+    return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
+  }
+}
+carro.acelerar(100, 20);
+// Ford acelerou 100 em 20
+
+const honda = {
+  marca: 'Honda',
+};
+const acelerarHonda = carro.acelerar.bind(honda);
+acelerarHonda(200, 10);
+// Honda acelerou 200 em 10
+
+function imc(altura, peso) {
+  return peso / (altura * altura);
+}
+
+const imc180 = imc.bind(null, 1.80);
+
+imc(1.80, 70); // 21.6
+imc180(70); // 21.6
