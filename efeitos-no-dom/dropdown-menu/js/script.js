@@ -12,4 +12,4 @@ initAnimacaoScroll();
 initAccordion();
 initModal();
 initToolTip();
-initDropDownMenu();
+initDropDownMenu(); 
