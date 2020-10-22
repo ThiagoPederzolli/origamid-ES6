@@ -28,18 +28,30 @@
     height: 2px;
     margin-bottom: 1px;
     margin-right: 2px;
+    transition: transform .3s;
     width: 12px;
   }
+
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
   .js #menu {
     background: #FB5;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
-    display: block;
+    display: none;
     padding: 60px 0 20px 0;
     position: absolute;
     top: 0;
     width: 160px;
     z-index: 200;
   }
+
+  .js #menu.active {
+    display: block;
+    animation: show-right .3s forwards;
+  }
+
   .js .dropdown-menu {
     border: none;
     position: static;
