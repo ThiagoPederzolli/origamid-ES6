@@ -23,3 +23,7 @@ input, textarea {
 textarea {
   height: 150px;
 }
+
+.invalido {
+  border: 1px solid red;
+}
